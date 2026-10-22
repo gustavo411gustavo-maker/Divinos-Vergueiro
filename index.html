@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Divinos Vergueiro Restaurante & Happy Hour: cardápio, reservas e localização na Liberdade, São Paulo.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Divinos Vergueiro Restaurante & Happy Hour</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero">
+  <h1>Divinos Vergueiro</h1>
+  <h2>Restaurante &amp; Happy Hour</h2>
+  <p class="addr">Rua Vergueiro, 133 · Liberdade · São Paulo</p>
+  <nav class="btns">
+    <a class="btn" href="#cardapio">Ver cardápio</a>
+    <a class="btn" href="#reservar">Reservar mesa</a>
+    <a class="btn" href="#chegar">Como chegar</a>
+  </nav>
+  <a class="btn wa wa-link" data-wa="Olá! Vim pelo site do Divinos Vergueiro." target="_blank" rel="noopener">WhatsApp (11) 96016-3711</a>
+</header>
+
+<section id="cardapio">
+  <h3>Cardápio</h3>
+  <div class="tabs" id="tabs"></div>
+  <div id="menu"></div>
+</section>
+
+<section id="fotos">
+  <h3>Nossos pratos</h3>
+  <div class="gal"><img src="img/prato-1.jpg" alt="Prato de carne grelhada com legumes e purê"><img src="img/prato-2.jpg" alt="Grelhado com arroz e batata frita"><img src="img/petiscos.jpg" alt="Petiscos e drink da casa"><img src="img/bar.jpg" alt="Bar do Divinos Vergueiro"></div>
+</section>
+
+<section id="reservar">
+  <h3>Reservar mesa</h3>
+  <div class="box">
+    <p class="c" style="margin-top:0;color:var(--mut)">Preencha e envie a reserva direto pelo WhatsApp.</p>
+    <label>Nome</label><input id="rn" placeholder="Seu nome">
+    <label>Data</label><input id="rd" type="date">
+    <label>Horário</label><input id="rh" type="time">
+    <label>Número de pessoas</label><input id="rp" type="number" min="1" value="2">
+    <a class="btn wa" id="rbtn" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+  </div>
+</section>
+
+<section id="chegar">
+  <h3>Como chegar</h3>
+  <div class="box c">
+    <p style="margin-top:0;font-size:1.1rem"><b>Rua Vergueiro, 133</b><br>Liberdade · São Paulo – SP · 01504-001</p>
+    <p class="hours">Seg a sex: 6h às 0h · Sáb: 7h às 23h · Dom: 7h às 22h</p>
+    <iframe class="map" title="Mapa: Divinos Vergueiro, Rua Vergueiro 133" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Rua+Vergueiro,+133,+Liberdade,+S%C3%A3o+Paulo&output=embed" width="100%" height="260" style="border:0"></iframe>
+    <div class="btns">
+      <a class="btn fill" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Divinos+Vergueiro+Rua+Vergueiro+133+S%C3%A3o+Paulo">Abrir no Google Maps</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://waze.com/ul?q=Rua%20Vergueiro%20133%20S%C3%A3o%20Paulo&navigate=yes">Waze</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Aceitamos todos os cartões de crédito e débito · Não aceitamos cheques</p>
+  <p>Instagram e Facebook: @divinosvergueiro · Delivery e reservas: (11) 96016-3711</p>
+</footer>
+<a class="fab" data-wa="Olá! Vim pelo site do Divinos Vergueiro." target="_blank" rel="noopener">WhatsApp</a>
+
+
+
+<button class="bagbtn" id="bagOpen" aria-label="Abrir sacola">🛍️ Sacola <span id="bagCount">0</span></button>
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="dhead"><h4>Sua sacola</h4><button id="bagClose" aria-label="Fechar sacola">×</button></div>
+  <div id="bagList" class="blist"></div>
+  <div class="dfoot">
+    <div class="tot"><span>Total</span><b id="bagTotal">R$ 0,00</b></div>
+    <label for="bagNote">Mesa, nome ou observação (opcional)</label>
+    <input id="bagNote" placeholder="Ex.: mesa 5, sem cebola">
+    <a class="btn wa" id="bagSend" target="_blank" rel="noopener">Enviar pedido pelo WhatsApp</a>
+    <button class="btn" id="bagClear" type="button">Limpar sacola</button>
+  </div>
+</aside>
+<script src="js/script.js" defer></script>
+</body>
+</html>

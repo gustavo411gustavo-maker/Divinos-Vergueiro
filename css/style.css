@@ -1,0 +1,63 @@
+
+:root{color-scheme:dark;--bg:#12143a;--bg2:#1b1f4f;--card:#232862;--gold:#e6c274;--txt:#f4efe3;--mut:#b9b7d6;--wa:#25d366;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:'Montserrat',system-ui,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 20px;background:linear-gradient(rgba(18,20,58,.72),rgba(18,20,58,.92)),url(../img/bar.jpg) center/cover}
+.hero h1{font-family:'Cinzel Decorative',serif;font-size:clamp(2.4rem,9vw,5.2rem);margin:0;color:var(--gold);letter-spacing:.04em;line-height:1.1}
+.hero h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:clamp(1.3rem,4.5vw,2.2rem);margin:.4em 0 1.8em;color:var(--txt)}
+.addr{color:var(--mut);margin:0 0 2rem;font-size:.95rem}
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-block;padding:14px 28px;border:1.5px solid var(--gold);border-radius:999px;color:var(--gold);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem;background:transparent;cursor:pointer;font-family:inherit;transition:.2s}
+.btn:hover,.btn.fill{background:var(--gold);color:var(--bg)}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#06260f}
+.wa-link{margin-top:22px}
+section{max-width:980px;margin:0 auto;padding:72px 20px}
+section h3{font-family:'Cinzel Decorative',serif;color:var(--gold);text-align:center;font-size:clamp(1.6rem,5vw,2.4rem);margin:0 0 28px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:24px;justify-content:flex-start}
+@media(min-width:760px){.tabs{justify-content:center;flex-wrap:wrap;overflow:visible}}
+.tab{flex:none;padding:9px 18px;border-radius:999px;border:1px solid var(--card);background:var(--bg2);color:var(--mut);cursor:pointer;font:600 .8rem 'Montserrat',sans-serif}
+.tab.on{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+.sub{font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--gold);margin:30px 0 4px;border-bottom:1px solid var(--card)}
+.note{color:var(--mut);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.05rem;margin:4px 0 8px}
+.item{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dotted rgba(185,183,214,.25)}
+.item b{font-weight:600}
+.item small{display:block;color:var(--mut);font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.25}
+.pr{color:var(--gold);font-weight:600;white-space:nowrap}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gal img{width:100%;height:260px;object-fit:cover;border-radius:14px;display:block}
+.box{background:var(--bg2);border-radius:18px;padding:28px;max-width:560px;margin:0 auto}
+label{display:block;margin:12px 0 4px;color:var(--mut);font-size:.85rem}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid var(--card);background:var(--bg);color:var(--txt);font:inherit}
+.c{text-align:center}
+.box .btn{margin-top:20px;width:100%;text-align:center}
+.hours{color:var(--mut);margin:14px 0}.map{display:block;margin:18px 0 6px;border-radius:14px;overflow:hidden;border:1px solid var(--card)}.map svg{display:block;width:100%;height:auto}.mapcap{color:var(--mut);font-size:.8rem;margin:0 0 6px}
+footer{text-align:center;padding:36px 20px 90px;color:var(--mut);border-top:1px solid var(--card);font-size:.9rem}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--wa);color:#06260f;font-weight:600;padding:13px 20px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.4);z-index:5}
+
+/* ===== Sacola ===== */
+.rt{display:flex;align-items:center;gap:10px}
+.add{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--gold);background:transparent;color:var(--gold);font:600 1.2rem/1 'Montserrat',sans-serif;cursor:pointer;flex:none}
+.add:hover{background:var(--gold);color:var(--bg)}
+.bagbtn{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--gold);color:var(--bg);font:600 .9rem 'Montserrat',sans-serif;border:0;padding:13px 20px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.4);cursor:pointer;z-index:5}
+.bagbtn span{background:var(--bg);color:var(--gold);border-radius:999px;padding:1px 8px;margin-left:6px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:.25s;z-index:20}
+.overlay.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--bg2);z-index:21;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .25s;padding-top:env(safe-area-inset-top,0px)}
+.drawer.on{transform:none}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--card)}
+.dhead h4{margin:0;font-family:'Cinzel Decorative',serif;color:var(--gold);font-size:1.2rem}
+#bagClose{background:none;border:0;color:var(--txt);font-size:2rem;line-height:1;cursor:pointer}
+.blist{flex:1;overflow-y:auto;padding:8px 20px}
+.bl{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dotted rgba(185,183,214,.25)}
+.bl small{display:block;color:var(--mut)}
+.qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--gold);background:none;color:var(--gold);cursor:pointer}
+.empty{color:var(--mut);text-align:center;margin-top:40px}
+.dfoot{padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--card)}
+.tot{display:flex;justify-content:space-between;font-size:1.1rem}
+.tot b{color:var(--gold)}
+.dfoot .btn{display:block;width:100%;text-align:center;margin-top:12px}
+.dfoot .btn.off{opacity:.4;pointer-events:none}
+.map{width:100%;height:260px}
